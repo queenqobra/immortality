@@ -22,15 +22,7 @@ export const HeroBannerSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="relative w-full h-screen pt-[70px] overflow-hidden">
-      {/* Clouds background image */}
-      <img
-        className="absolute bottom-0 left-0 w-full h-auto object-cover pointer-events-none bg-gradient-to-t from-black to-transparent"
-        alt="Clouds background"
-        src="/clouds.webp"
-      />
-    
-
+    <section className="relative w-full flex flex-col items-center justify-center pt-0 overflow-hidden bg-black">
       <div className="scale-[1.2] origin-top flex flex-col items-center justify-center gap-2.5 w-full max-w-[1439px] relative z-10">
         {/* Logo area with wings */}
         <div className="scale-[1.2] relative w-[580px] h-[277px] flex-shrink-0">
@@ -92,7 +84,7 @@ export const HeroBannerSection = (): JSX.Element => {
 
         {/* Subtitle */}
         <div className="relative w-full max-w-[1174px] h-px mb-[-1.00px]">
-          <div className="absolute w-full h-full top-0 left-0 flex items-center justify-center [font-family:'Labor_Union-Regular',Helvetica] text-[#a7a7a7] text-[10px] tracking-[0.90px] leading-[170px] whitespace-nowrap font-normal text-center">
+          <div className="absolute w-full h-full top-0 left-0 flex items-center justify-center font-labor text-[#a7a7a7] text-[10px] tracking-[0.90px] leading-[170px] whitespace-nowrap font-normal text-center">
             Докажи своё превосходство
           </div>
         </div>

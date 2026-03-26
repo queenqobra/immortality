@@ -9,17 +9,13 @@ import {
 const navItems = [
   {
     label: "ВХОД",
-    fontFamily: "[font-family:'Literature_Decor-Regular',Helvetica]",
   },
-  { label: "СЕТКА",
-   fontFamily: "[font-family:'Literature_Decor-Regular',Helvetica]" },
+  { label: "СЕТКА" },
   {
     label: "ТУРНИРЫ",
-    fontFamily: "[font-family:'Literature_Decor-Regular',Helvetica]",
   },
   {
     label: "ПРОФИЛЬ",
-    fontFamily: "[font-family:'Literature_Decor-Regular',Helvetica]",
   },
 ];
 
@@ -35,7 +31,7 @@ export const NavigationHeaderSection = (): JSX.Element => {
             {navItems.map((item) => (
               <NavigationMenuItem key={item.label}>
                 <NavigationMenuLink
-                  className={`flex items-center justify-center w-[70px] h-[30px] ${item.fontFamily} text-white text-[15px] min-text-[10px] tracking-[0.30px] leading-[0.1px] font-normal text-center cursor-pointer hover:opacity-80 transition-opacity bg-transparent`}
+                  className="flex items-center justify-center w-[70px] h-[30px] font-labor text-white text-[15px] min-text-[10px] tracking-[0.30px] leading-[0.1px] font-normal text-center cursor-pointer hover:opacity-80 transition-opacity bg-transparent"
                   onClick={() => setActiveItem(item.label)}
                   style={{ textDecoration: "none" }}
                 >

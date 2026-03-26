@@ -9,7 +9,7 @@ export const TournamentDetailsSection = (): JSX.Element => {
       starClass: "w-[26.95%] h-[15.38%] top-[22.58%] left-[36.17%]",
       contentClass: "top-[43.92%] h-[46.24%]",
       content: (
-        <div className="[font-family:'Labor_Union-Regular',Helvetica] font-normal text-white text-[10px] text-center tracking-[0.30px] leading-[18px]">
+        <div className="font-labor font-normal text-white text-[10px] text-center tracking-[0.30px] leading-[18px]">
           <span className="tracking-[0.03px]">
             <br />
           </span>
@@ -62,7 +62,7 @@ export const TournamentDetailsSection = (): JSX.Element => {
       starClass: "w-[25.00%] h-[14.78%] top-[25.61%] left-[37.86%]",
       contentClass: "top-[50.17%] h-[40.53%]",
       content: (
-        <div className="[font-family:'Labor_Union-Regular',Helvetica] text-white text-[10px] tracking-[0.30px] leading-[30px] font-normal text-center">
+        <div className="font-labor text-white text-[10px] tracking-[0.30px] leading-[30px] font-normal text-center">
           <span className="tracking-[0.03px]">
             <br />
             нАЧАЛО
@@ -163,7 +163,7 @@ export const TournamentDetailsSection = (): JSX.Element => {
             <div className="absolute w-[99.29%] h-[9.87%] top-[4.47%] left-0 flex items-center justify-center [text-shadow:0px_0px_3.36px_#ffffff] [font-family:'Literature_Decor-Regular',Helvetica] text-white text-lg tracking-[0.54px] leading-[0.1px] font-normal text-center">
               формат турнира
             </div>
-            <div className="absolute w-[99.29%] h-[46.24%] top-[43.92%] left-0 [font-family:'Labor_Union-Regular',Helvetica] font-normal text-white text-[10px] text-center tracking-[0.30px] leading-[18px]">
+            <div className="absolute w-[99.29%] h-[46.24%] top-[43.92%] left-0 font-labor font-normal text-white text-[10px] text-center tracking-[0.30px] leading-[18px]">
               <span className="tracking-[0.03px]">
                 <br />
               </span>
@@ -212,7 +212,7 @@ export const TournamentDetailsSection = (): JSX.Element => {
           {/* Card 2: Даты проведения */}
           <div className="relative w-[280px] h-[478px]">
             <div className="absolute w-[98.93%] h-[96.09%] top-[3.91%] left-0 bg-[#00000078] border border-solid border-transparent backdrop-blur-[3.9px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(3.9px)_brightness(100%)] [border-image:linear-gradient(180deg,rgba(0,0,0,0.64)_0%,rgba(102,102,102,0.64)_100%)_1]" />
-            <div className="absolute w-full h-[40.53%] top-[50.17%] left-0 [font-family:'Labor_Union-Regular',Helvetica] text-white text-[10px] tracking-[0.30px] leading-[30px] font-normal text-center">
+            <div className="absolute w-full h-[40.53%] top-[50.17%] left-0 font-labor text-white text-[10px] tracking-[0.30px] leading-[30px] font-normal text-center">
               <span className="tracking-[0.03px]">
                 <br />
                 нАЧАЛО
@@ -244,13 +244,13 @@ export const TournamentDetailsSection = (): JSX.Element => {
           {/* Card 3: Ограничение рейтинга */}
           <div className="relative w-[281px] h-[478px]">
             <div className="absolute w-full h-[96.18%] top-[3.82%] left-0 bg-[#00000078] border border-solid border-transparent backdrop-blur-[3.9px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(3.9px)_brightness(100%)] [border-image:linear-gradient(180deg,rgba(0,0,0,0.64)_0%,rgba(102,102,102,0.64)_100%)_1]" />
-            <div className="absolute w-[92.88%] h-[15.45%] top-[51.43%] left-[4.63%] flex items-center justify-center [font-family:'Labor_Union-Regular',Helvetica] font-normal text-white text-[10px] text-center tracking-[0.30px] leading-[30px]">
+            <div className="absolute w-[92.88%] h-[15.45%] top-[51.43%] left-[4.63%] flex items-center justify-center font-labor font-normal text-white text-[10px] text-center tracking-[0.30px] leading-[30px]">
               <span className="tracking-[0.03px]">
                 Ограничения по рейтингу на команду{" "}
               </span>
               <span className="text-xl tracking-[0.12px]">30000</span>
             </div>
-            <div className="absolute w-[93.59%] h-[18.38%] top-[71.12%] left-[3.56%] [font-family:'Labor_Union-Regular',Helvetica] text-white text-[10px] tracking-[0.30px] leading-[30px] font-normal text-center">
+            <div className="absolute w-[93.59%] h-[18.38%] top-[71.12%] left-[3.56%] font-labor text-white text-[10px] tracking-[0.30px] leading-[30px] font-normal text-center">
               <span className="tracking-[0.03px]">
                 ОГРАНИЧЕНИЯ ПО ИНДИВИДУАЛЬНОМУ РЕЙТИНГУ <br />
               </span>
@@ -278,17 +278,17 @@ export const TournamentDetailsSection = (): JSX.Element => {
           </div>
 
           {/* 1st place */}
-          <div className="h-[25.83%] top-[30.90%] left-[4.45%] text-[35px] tracking-[1.05px] absolute w-[91.10%] flex items-center justify-center [font-family:'Labor_Union-Regular',Helvetica] font-normal text-white text-center leading-[54px]">
+          <div className="h-[25.83%] top-[30.90%] left-[4.45%] text-[35px] tracking-[1.05px] absolute w-[91.10%] flex items-center justify-center font-labor font-normal text-white text-center leading-[54px]">
             1 МЕСТО - 6500 РУБЛЕЙ
           </div>
 
           {/* 2nd place */}
-          <div className="h-[31.41%] top-[45.30%] left-[4.34%] text-3xl tracking-[0.90px] absolute w-[91.10%] flex items-center justify-center [font-family:'Labor_Union-Regular',Helvetica] font-normal text-white text-center leading-[54px]">
+          <div className="h-[31.41%] top-[45.30%] left-[4.34%] text-3xl tracking-[0.90px] absolute w-[91.10%] flex items-center justify-center font-labor font-normal text-white text-center leading-[54px]">
             2 МЕСТО - 3500 РУБЛЕЙ
           </div>
 
           {/* 3rd place */}
-          <div className="h-[25.83%] top-[61.80%] left-[4.45%] text-xl tracking-[0.60px] absolute w-[91.10%] flex items-center justify-center [font-family:'Labor_Union-Regular',Helvetica] font-normal text-white text-center leading-[54px]">
+          <div className="h-[25.83%] top-[61.80%] left-[4.45%] text-xl tracking-[0.60px] absolute w-[91.10%] flex items-center justify-center font-labor font-normal text-white text-center leading-[54px]">
             3 МЕСТО - 2000 РУБЛЕЙ
           </div>
 
