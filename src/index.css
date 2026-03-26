@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* ШРИФТЫ */
+@font-face {
+  font-family: "Labor";
+  src: url("/fonts/LaborUnion-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Literature";
+  src: url("/fonts/Literature-Decor.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Ledger";
+  src: url("/fonts/Ledger-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Orbitron";
+  src: url("/fonts/Orbitron-VariableFont_wght.ttf") format("truetype");
+}
+
+
+@font-face {
+  font-family: "Thorsa";
+  src: url("/fonts/Thorsa.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Kudry";
+  src: url("/fonts/kudry_weird-headline.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "IMFellFrenchCanonSC";
+  src: url("/fonts/IMFellFrenchCanonSC-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OrbitronRUS";
+  src: url("/fonts/3860-font.ttf") format("truetype");
+}
