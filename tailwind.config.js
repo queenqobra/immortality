@@ -56,6 +56,18 @@ module.exports = {
           '"Segoe UI Symbol"',
           '"Noto Color Emoji"',
         ],
+  
+      labor: ["Labor"],
+      literature: ["Literature"],
+      ledger: ["Ledger"],
+      thorsa: ["Thorsa"],
+      orbitron: ["Orbitron"],
+      kudry: ["Kudry"],
+      frenchcanon: ["IMFellFrenchCanonSC"],
+      orbitronrus: ["OrbitronRUS"]
+    
+
+    
       },
       keyframes: {
         "accordion-down": {
