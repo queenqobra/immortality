@@ -1,1 +1,0 @@
-export { SocialMediaFooterSection } from "./SocialMediaFooterSection";
