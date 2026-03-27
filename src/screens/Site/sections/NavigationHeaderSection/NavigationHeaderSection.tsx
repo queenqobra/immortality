@@ -7,20 +7,12 @@ import {
 } from "../../../../components/ui/navigation-menu";
 
 const navItems = [
-  {
-    label: "ВХОД",
-  },
-  { label: "СЕТКА" },
-  {
-    label: "ТУРНИРЫ",
-  },
-  {
-    label: "ПРОФИЛЬ",
-  },
+  { label: "СЕТКА", href: "#grid" },
+  { label: "ИНФОРМАЦИЯ", href: "#info" },
 ];
 
 export const NavigationHeaderSection = (): JSX.Element => {
-  const [activeItem, setActiveItem] = useState<string | null>(null);
+  const [, setActiveItem] = useState<string | null>(null);
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 flex flex-col items-center bg-gradient-to-b from-black/70 to-transparent">
@@ -30,13 +22,15 @@ export const NavigationHeaderSection = (): JSX.Element => {
           <NavigationMenuList className="flex items-center gap-[18vw]">
             {navItems.map((item) => (
               <NavigationMenuItem key={item.label}>
-                <NavigationMenuLink
-                  className="flex items-center justify-center w-[70px] h-[30px] font-labor text-white text-[15px] min-text-[10px] tracking-[0.30px] leading-[0.1px] font-normal text-center cursor-pointer hover:opacity-80 transition-opacity bg-transparent"
-                  onClick={() => setActiveItem(item.label)}
-                  style={{ textDecoration: "none" }}
-                >
-                  {item.label}
-                </NavigationMenuLink>
+                <NavigationMenuLink asChild>
+  <a
+    href={item.href}
+    className="flex items-center justify-center w-[500px] h-[30px] font-literature text-white text-[15px] min-text-[10px] tracking-[0.30px] leading-[0.1px] font-normal text-center cursor-pointer hover:opacity-80 transition-opacity bg-transparent"
+    onClick={() => setActiveItem(item.label)}
+  >
+    {item.label}
+  </a>
+</NavigationMenuLink>
               </NavigationMenuItem>
             ))}
           </NavigationMenuList>

@@ -5,56 +5,101 @@ import { TournamentBracketSection } from "./sections/TournamentBracketSection/To
 import { TournamentDetailsSection } from "./sections/TournamentDetailsSection/TournamentDetailsSection";
 
 export const Site = (): JSX.Element => {
-  return (
-    <div className="relative w-full bg-black">
-      {/* Top background section with background image and decorations */}
-      <div className="relative w-full h-screen flex flex-col items-center bg-black overflow-hidden">
-        {/* Background image at top */}
-        <img
-          className="w-full h-auto object-cover"
-          alt="Background"
-          src="/1background.png"
-        />
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
-        {/* Side decorative images - only at top, not scrolling */}
+  return (
+    <div className="relative min-h-screen flex flex-col bg-black">
+      {/* Fixed navigation */}
+      <NavigationHeaderSection />
+       <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+
+  {/* ФОН */}
+  <img
+    src="/1background.png"
+    className="absolute top-0 left-0 w-full h-full object-cover z-0 pointer-events-none"
+    loading="lazy"
+  />
+
+  {/* ДЕКОР - hidden on mobile */}
+  <img
+    className="absolute top-0 left-0 w-[25vw] max-w-[460px] z-10 pointer-events-none hidden md:block"
+    src="/side-decor.png"
+    loading="lazy"
+  />
+  <img
+    className="absolute top-0 right-0 w-[25vw] max-w-[460px] z-10 scale-x-[-1] pointer-events-none hidden md:block"
+    src="/side-decor.png"
+    loading="lazy"
+  />
+
+  {/* HERO */}
+  <div className="relative z-20 w-full px-2">
+    <HeroBannerSection />
+  </div>
+
+</section>
+        {/* red pic */}
+       <div className="absolute inset-0 z-0 pointer-events-none">
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="w-full h-full object-cover opacity-40"
+    loading="lazy"
+  >
+    <source src="/pic_red.webm" type="video/webm" />
+  </video>
+
+</div>
+
+        {/* Side decorations - visible only on larger screens */}
         <img
-          className="absolute top-0 left-0 w-[25vw] max-w-[460px] h-auto object-contain z-10 pointer-events-none"
+          className="absolute top-0 left-0 w-[25vw] max-w-[460px] h-auto object-contain z-10 pointer-events-none hidden md:block"
           alt="Left decoration"
           src="/side-decor.png"
+          loading="lazy"
         />
         <img
-          className="absolute top-0 right-0 w-[25vw] max-w-[460px] h-auto object-contain z-10 scale-x-[-1] pointer-events-none"
+          className="absolute top-0 right-0 w-[25vw] max-w-[460px] h-auto object-contain z-10 scale-x-[-1] pointer-events-none hidden md:block"
           alt="Right decoration"
           src="/side-decor.png"
+          loading="lazy"
         />
 
-        {/* Gradient overlays */}
-        <div className="absolute top-0 left-0 w-full h-[20%] bg-gradient-to-b from-black via-black/80 to-transparent z-20 pointer-events-none" />
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-black/30 to-black z-5 pointer-events-none" />
-      </div>
+        {/* Top dark gradient */}
+        <div className="absolute top-0 left-0 w-full h-[50%] bg-gradient-to-b from-black via-black/20 to-transparent z-10 pointer-events-none" />
 
-      {/* Main content stacked vertically in document flow */}
-      <div className="relative w-full flex flex-col bg-black">
-        <NavigationHeaderSection />
-        <main className="flex-1">
-          <HeroBannerSection />
-          <TournamentDetailsSection />
-          <TournamentBracketSection />
-        </main>
-        <SocialMediaFooterSection />
-      </div>
+      {/* Main content */}
+      <main className="flex-1 relative z-10 w-full">
+        <TournamentDetailsSection />
+        <TournamentBracketSection />
+      </main>
+      <div className="relative w-full overflow-visible pointer-events-none z-0"></div>
+<div className="relative">
+  <button
+    onClick={scrollToTop}
+    className="
+      fixed right-4 md:right-6
+      bottom-6 md:bottom-20
+      w-10 h-10 md:w-12 md:h-12
+      bg-[url(/arrow.png)]
+      bg-contain bg-no-repeat bg-center
+      z-50
+      cursor-pointer
+      hover:scale-110 active:scale-95
+      transition-transform duration-200
+    "
+    style={{
+      filter: "drop-shadow(0 0 10px white)"
+    }}
+    aria-label="Scroll to top"
+  />
+</div>
 
-      {/* Clouds at bottom - fixed to bottom of viewport */}
-      <div className="fixed bottom-0 left-0 w-full h-auto z-0 pointer-events-none">
-        <img
-          className="w-full h-auto object-cover"
-          alt="Clouds background"
-          src="/clouds.webp"
-        />
-      </div>
-
-      {/* Arrow scroll-to-top button */}
-      <div className="fixed bottom-8 right-8 w-8 h-[31px] bg-[url(/arrow.png)] bg-[100%_100%] z-50" />
-    </div>
+<SocialMediaFooterSection />
+</div>
   );
 };

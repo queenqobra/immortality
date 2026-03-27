@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 
-/* ШРИФТЫ */
 @font-face {
   font-family: "Labor";
   src: url("/fonts/LaborUnion-Regular.otf") format("opentype");
@@ -23,7 +22,6 @@
   font-family: "Orbitron";
   src: url("/fonts/Orbitron-VariableFont_wght.ttf") format("truetype");
 }
-
 
 @font-face {
   font-family: "Thorsa";
